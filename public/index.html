@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MKDIR</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-window" id="chat-window"></div>
+
+    <div class="sidebar">
+      <input type="text" id="username" placeholder="Masukkan Namamu" />
+    </div>
+
+    <div class="message-input">
+      <input type="text" id="message" placeholder="Tulis pesan ..." />
+      <input type="file" id="fileInput" />
+      <button id="sendBtn">Kirim</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
