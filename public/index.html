@@ -16,25 +16,26 @@
     </div>
     <div class="chat-container">
       <div class="the-top-padding"></div>
-      <div class="chat-window" id="chat-window">
-    
-      </div>
-
-      <div class="message-input">
-        <div id="fileName" class="file-name"></div>
-        <div class="flex-message">
-          <label for="fileInput" class="file-label"
-            ><i class="fas fa-paperclip"></i
-          ></label>
-          <input type="file" id="fileInput" style="display: none" />
-          <input type="text" id="message" placeholder="Tulis pesan ..." />
-          <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
-        </div>
+      <div class="chat-window" id="chat-window"></div>
+    </div>
+    <div class="message-input">
+      <div id="fileName" class="file-name"></div>
+      <div class="flex-message">
+        <label for="fileInput" class="file-label"
+          ><i class="fas fa-paperclip"></i
+        ></label>
+        <input type="file" id="fileInput" style="display: none" />
+        <input type="text" id="message" placeholder="Tulis pesan ..." />
+        <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
       </div>
     </div>
 
     <button id="hamburgerBtn" class="hamburger-btn">
       <i class="fas fa-bars"></i>
+    </button>
+
+    <button id="themeToggleBtn" class="theme-toggle-btn">
+      <i class="fas fa-sun"></i>
     </button>
 
     <script src="/socket.io/socket.io.js"></script>
@@ -68,6 +69,23 @@
         .addEventListener('focus', scrollToBottom)
 
       window.addEventListener('resize', scrollToBottom)
+
+      const themeToggleBtn = document.getElementById('themeToggleBtn')
+      const root = document.documentElement
+      let isDarkMode = false
+
+      themeToggleBtn.addEventListener('click', () => {
+        if (isDarkMode) {
+          root.style.setProperty('--primary-color', 'white')
+          root.style.setProperty('--secondary-color', 'black')
+          themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>'
+        } else {
+          root.style.setProperty('--primary-color', 'black')
+          root.style.setProperty('--secondary-color', 'white')
+          themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>'
+        }
+        isDarkMode = !isDarkMode
+      })
     </script>
   </body>
 </html>
