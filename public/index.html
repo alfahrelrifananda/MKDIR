@@ -16,7 +16,12 @@
     </div>
     <div class="chat-container">
       <div class="the-top-padding"></div>
-      <div class="chat-window" id="chat-window"></div>
+      <div class="chat-window" id="chat-window">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea velit
+        dolores deserunt inventore ab odit necessitatibus voluptas expedita,
+        voluptates esse, ex vero quas et amet nisi harum explicabo eveniet
+        distinctio?
+      </div>
 
       <div class="message-input">
         <div id="fileName" class="file-name"></div>
@@ -51,6 +56,21 @@
       hamburgerBtn.addEventListener('click', function () {
         sidebar.classList.toggle('show-sidebar')
       })
+
+      function scrollToBottom() {
+        const chatWindow = document.getElementById('chat-window')
+        chatWindow.scrollTop = chatWindow.scrollHeight
+      }
+
+      document.getElementById('sendBtn').addEventListener('click', function () {
+        scrollToBottom()
+      })
+
+      document
+        .getElementById('message')
+        .addEventListener('focus', scrollToBottom)
+
+      window.addEventListener('resize', scrollToBottom)
     </script>
   </body>
 </html>
