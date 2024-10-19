@@ -14,7 +14,7 @@ io.on('connection', (socket) => {
   // Saat user mengirim pesan
   socket.on('chat message', (data) => {
     io.emit('chat message', {
-      username: data.username || 'Anonymous',
+      username: data.username || 'Anonim',
       message: data.message,
     });
   });
