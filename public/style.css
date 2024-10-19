@@ -12,10 +12,9 @@ body {
 }
 
 .chat-window {
-  top: 55px;
   position: relative;
   padding: 5vw;
-  padding-top: 1vw;
+  padding-top: 55px;
   padding-bottom: 1vw;
   overflow-y: auto;
   border-right: 1px solid #ccc;
