@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
   // Saat user mengirim file
   socket.on('file upload', (data) => {
     io.emit('file upload', {
-      username: data.username || 'Anonymous',
+      username: data.username || 'Anonim',
       file: data.file,
       filename: data.filename,
     });
