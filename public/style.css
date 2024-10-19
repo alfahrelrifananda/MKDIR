@@ -1,3 +1,4 @@
+/* General style */
 body {
   margin: 0;
   padding: 0;
@@ -24,7 +25,7 @@ body {
   padding-top: 65px;
   padding-bottom: 1vw;
   overflow-y: auto;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 160px);
 }
 
 .sidebar {
@@ -147,6 +148,6 @@ body {
 @media only screen and (max-width: 991px),
   screen and (max-width: 1024px) and (orientation: portrait) {
   .chat-window {
-    width: 100%;
+    width: calc(100% - 10vw);
   }
 }
