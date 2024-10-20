@@ -189,6 +189,7 @@ body {
 
   .chat-window {
     width: calc(100% - 10vw - 2px);
-border: none;
+border-left: none;
+border-right: none;
   }
 }
